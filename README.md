@@ -18,7 +18,13 @@
 3. **Beginner Tutorials and Projects for Better Understanding**
    - Emoji prediction model
 
+4. **Introductory Insights into Transformers and LLMs**
+   - Understanding Transformers
+   - Building beginner-friendly models
+   - Mathematics and techniques behind LLMs.
+5. **Final Project**
 ## Vanilla RNN Experiment
+
 
 This experiment tests a simple vanilla RNN to predict the next character in a synthetically generated sequence. The sequences are built using random choices from a rule-based grammar. The model tries to learn these transition rules.
 
