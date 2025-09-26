@@ -50,9 +50,10 @@ model=RNN(in_size,out_size,hidden_size)
 optimizer=torch.optim.Adam(model.parameters(),lr=0.007)
 loss_list=[]
 for j in range(num_epochs):
-    h=torch.zeros(hidden_size)
+    #h=torch.zeros(hidden_size)
     m=[]
     for k in range(len(x_list)):
+        h=torch.zeros(hidden_size)
         for i in range(len(x_list[k])-1):
             y_hat,h=model(x_embed_list[k][:i+1],h)
             y=target_list[k][i+1]
