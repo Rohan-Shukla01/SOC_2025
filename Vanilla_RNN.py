@@ -26,14 +26,14 @@ class RNN(nn.Module):
     def get_loss(self,y_hat,y):
         loss=nn.CrossEntropyLoss()
         return loss(y_hat,y)
-in_size,out_size,hidden_size=4,4,9
+in_size,out_size,hidden_size=5,5,9
 num_ex=35
 num_sent=10
 num_epochs=20
-char_embed={"a":[1,0,0,0],"b":[0,1,0,0],"c":[0,0,1,0],"d":[0,0,0,1]}
+char_embed={"a":[1,0,0,0,0],"b":[0,1,0,0,0],"c":[0,0,1,0,0],"d":[0,0,0,1,0],"e":[0,0,0,0,1]}
 l=sorted(list(char_embed.keys()))
 rules={
-    "a":["c","d"], "b":["d","a"],"c":["a","b"],"d":["b","c"]
+    "a":["c"], "b":["d"],"c":["a"],"d":["b"], "e":["a"]
 }
 x_list=[random.choice(l) for j in range(num_sent)]
 for j in range(num_sent):
